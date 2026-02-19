@@ -283,3 +283,22 @@ pre{
   border-top: 1px solid var(--line);
   background: #fff;
 }
+.caseMeta{
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.caseMeta p{ margin: 0 0 4px; }
+
+.caseBlock{
+  margin-top: 14px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--line);
+}
+.caseBlock .label{
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+.caseBlock .text{ margin: 0 0 8px; }
+
