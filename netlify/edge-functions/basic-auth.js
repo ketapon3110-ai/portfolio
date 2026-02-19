@@ -1,13 +1,18 @@
-export default async (request, context) => {
-  const user = process.env.BASIC_USER || "";
-  const pass = process.env.BASIC_PASS || "";
-  const expected = "Basic " + btoa(`${user}:${pass}`);
+const base64 = (str) => {
+  // Edge(Deno)でも動くBase64
+  return btoa(unescape(encodeURIComponent(str)));
+};
 
-  const auth = request.headers.get("authorization") || "";
+export default async (request, context) => {
+  const user = Deno.env.get("BASIC_USER") || "";
+  const pass = Deno.env.get("BASIC_PASS") || "";
 
   if (!user || !pass) {
     return new Response("Auth is not configured.", { status: 500 });
   }
+
+  const expected = "Basic " + base64(`${user}:${pass}`);
+  const auth = request.headers.get("authorization") || "";
 
   if (auth !== expected) {
     return new Response("Unauthorized", {
