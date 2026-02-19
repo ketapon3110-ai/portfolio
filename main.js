@@ -7,7 +7,7 @@
 
     // 開いたら先頭スライドへ
     var deck = el.querySelector("[data-deck]");
-    if (deck) deck.scrollTo({ top: 0, behavior: "instant" });
+    if (deck) deck.scrollTo({ top: 0, behavior: "auto" });
   }
 
   function closeModal() {
