@@ -26,17 +26,34 @@
   function scrollDeckBy(dir) {
     var deck = getOpenDeck();
     if (!deck) return;
+  
     var slides = Array.prototype.slice.call(deck.querySelectorAll(".deckSlide"));
     if (!slides.length) return;
-
-    var top = deck.scrollTop;
+  
+    // deck内スクロール位置
+    var st = deck.scrollTop;
+  
+    // 「deck内でのoffsetTop」を使う（親がdeckなのでOK）
+    // 現在位置に最も近いスライドを探す
     var currentIndex = 0;
+    var bestDist = Infinity;
+  
     for (var i = 0; i < slides.length; i++) {
-      if (slides[i].offsetTop <= top + 8) currentIndex = i;
+      var y = slides[i].offsetTop; // deck内
+      var dist = Math.abs(y - st);
+      if (dist < bestDist) {
+        bestDist = dist;
+        currentIndex = i;
+      }
     }
-    var next = Math.max(0, Math.min(slides.length - 1, currentIndex + dir));
-    deck.scrollTo({ top: slides[next].offsetTop, behavior: "smooth" });
+  
+    var nextIndex = currentIndex + dir;
+    if (nextIndex < 0) nextIndex = 0;
+    if (nextIndex > slides.length - 1) nextIndex = slides.length - 1;
+  
+    deck.scrollTo({ top: slides[nextIndex].offsetTop, behavior: "smooth" });
   }
+
 
   document.addEventListener("click", function (e) {
     var t = e.target;
