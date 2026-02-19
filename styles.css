@@ -1,24 +1,124 @@
-.page { padding-top: 60px; }
-.section { padding: 64px 0; }
-.heroSection { padding: 84px 0 48px; }
+:root{
+  --bg: #0b0f19;
+  --text: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --card: #ffffff;
+  --shadow: 0 10px 30px rgba(2,6,23,.08);
+  --radius: 16px;
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+  color: var(--text);
+  background: #f6f7fb;
+  line-height: 1.7;
+}
+
+a{ color: inherit; text-decoration: none; }
+a:hover{ text-decoration: underline; }
+img{ max-width: 100%; height: auto; display: block; }
+
+.container{
+  width: min(1080px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(246,247,251,.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar__inner{
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand{ font-weight: 700; }
+.nav{ display:flex; gap: 14px; font-size: 14px; color: var(--muted); }
+.nav a{ padding: 6px 8px; border-radius: 10px; }
+.nav a:hover{ background: rgba(226,232,240,.7); text-decoration: none; }
+
+.page{ padding-top: 10px; }
+
+.heroSection{
+  padding: 56px 0 32px;
+}
+.kicker{
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+.title{
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+.lead{
+  margin: 0 0 18px;
+  color: var(--muted);
+  max-width: 72ch;
+}
+
+.section{ padding: 48px 0; }
+.h2{ margin: 0 0 14px; font-size: 22px; }
+.h3{ margin: 0; font-size: 16px; }
+.muted{ color: var(--muted); font-size: 13px; margin: 6px 0 0; }
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.stats{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+@media (max-width: 900px){
+  .stats{ grid-template-columns: 1fr; }
+  .title{ font-size: 28px; }
+}
+.stat{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+}
+.stat__num{ font-weight: 800; font-size: 18px; }
+.stat__label{ color: var(--muted); font-size: 12px; }
 
 .workGrid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 @media (max-width: 980px){
   .workGrid{ grid-template-columns: 1fr; }
 }
+
 .workCard{
-  background: #fff;
+  background: var(--card);
   border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 16px;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
-  display:flex;
-  flex-direction:column;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
+  min-height: 180px;
 }
 .workCard__meta{
   display:flex;
@@ -35,9 +135,77 @@
 }
 .workCard__actions{ margin-top: auto; }
 
-.modal__panel--deck{
-  max-width: 980px;
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #0f172a;
+  background: #0f172a;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
 }
+.btn:hover{ opacity: .92; text-decoration: none; }
+.btn--ghost{
+  background: transparent;
+  color: #0f172a;
+  border-color: var(--line);
+}
+.btn--small{ padding: 8px 10px; border-radius: 10px; font-size: 13px; }
+
+.grid2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 900px){
+  .grid2{ grid-template-columns: 1fr; }
+}
+.label{ margin: 0 0 6px; font-size: 12px; color: var(--muted); }
+.text{ margin: 0; }
+
+.contactRow{ display:flex; gap: 10px; flex-wrap: wrap; }
+
+/* ===== Modal ===== */
+.modal{
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 100;
+}
+.modal[aria-hidden="false"]{ display: block; }
+
+.modal__overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(2,6,23,.55);
+}
+
+.modal__panel{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(980px, calc(100% - 20px));
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 25px 70px rgba(2,6,23,.35);
+  overflow: hidden;
+}
+.modal__head{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 12px 12px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+.modal__title{ font-weight: 700; }
+
 .modalDeck{
   height: min(72vh, 720px);
   overflow-y: auto;
@@ -47,15 +215,66 @@
 .deckSlide{
   min-height: 100%;
   scroll-snap-align: start;
-  padding: 18px 12px;
+  padding: 18px 14px;
 }
-.deckInner{
-  padding: 8px 6px 18px;
+.deckInner{ padding: 6px 2px 18px; }
+.deckTitle{ margin: 0 0 10px; font-size: 22px; }
+.stats--tight{ margin-top: 12px; grid-template-columns: 1fr 1fr 1fr; }
+@media (max-width: 900px){
+  .stats--tight{ grid-template-columns: 1fr; }
 }
-.deckTitle{
-  margin: 0 0 10px;
-  font-size: 22px;
+
+.figure{
+  margin: 14px 0 0;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
 }
+.figure figcaption{
+  padding: 10px 12px;
+  font-size: 12px;
+  color: var(--muted);
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+
+.codeBlock{
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.codeBlock__title{
+  padding: 10px 12px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted);
+}
+pre{
+  margin: 0;
+  padding: 12px;
+  overflow: auto;
+  background: #0b1020;
+  color: #e2e8f0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.funnel{ margin-top: 10px; }
+.funnel__row{
+  display:flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f8fafc;
+}
+.funnel__row + .funnel__row{ margin-top: 8px; }
+.funnel__name{ color: var(--muted); font-size: 13px; }
+.funnel__val{ font-weight: 700; }
+
 .deckNav{
   display:flex;
   justify-content:flex-end;
