@@ -29,7 +29,7 @@ body {
     font-weight: 300;
     font-size: 1.6em;
     line-height: 2.4rem;
-    letter-spacing: 0.2em;
+    letter-spacing: 1px;
     background-color: #fff;
     box-sizing:border-box;
   }
