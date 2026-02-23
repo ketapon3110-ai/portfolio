@@ -282,6 +282,7 @@ h3.case-section__subtitle {
 }
 
 .splide__arrow {
+    display: none;
     border: none;
     width: 45px;
     height: 45px;
