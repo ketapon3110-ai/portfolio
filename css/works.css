@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+body {
+    color: #555;
+}
+
+h2 {
+    margin: 100px 0;
+    font-size: 1em;
+    color: #000;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+hr {
+    background-color: #eee;
+}
+
+.works-single {
+    padding: 3vw 5vw;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.works-single .content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.works-single .item-left {
+    width: 54.128%;
+}
+
+.works-single .works-title-block {
+    margin-top: 36px;
+}
+
+.works-single .item-right {
+    width: 40.7339%;
+    font-size: 0.75rem;
+    color: #000;
+    line-height: 2.333;
+}
+
+.works-single .item-right dl dt {
+    min-width: 4.5em;
+    font-size: 16px;
+}
+
+.item-right dl,
+.section-title p {
+    letter-spacing: 0.2em;
+    margin-bottom: 20px;
+}
+
+.view-more-home a,
+.view-more a {
+    display: inline-block;
+    padding: 10px 38px 10px 0;
+    font-weight: 500;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+.view-more {
+    margin-top: 35px;
+}
+
+.view-more.is-works a {
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: #0066c0;
+    font-size: 14px;
+}
+
+.term-list {
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    font-size: 0.75rem;
+    color: #555;
+}
+
+.term-list li {
+    min-width: 66px;
+    padding: 2px 15px;
+    margin-bottom: 10px;
+    border: solid 1px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 1.583;
+}
+
+.page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.page-nav a {
+    font-size: 0.7em;
+}
+
+.works-single {
+    font-size: 0.8em;
+}
+
+.item-under {
+    letter-spacing: 0.1em;
+    line-height: 2em;
+    font-size: 0.7em;
+    margin-bottom: 160px;
+}
+
+.works-textlist li {
+    list-style: inside;
+    padding: 0 0 1em 1.2em;
+    text-indent: -1.2em;
+}
+
+.item-under dl {
+    width: 100%;
+    display: flex;
+    margin: 50px 0;
+}
+
+.item-under dt {
+    width: 20%;
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+.zemi {
+    max-width: 350px;
+    margin: 0 0 20px -35px;
+}
+
+
+.link {
+    width: 17px;
+    padding: 0 0 0 10px;
+}
+
+
+/*矢印が右に移動する*/
+.btnarrow-left {
+    /*矢印と下線の基点とするためrelativeを指定*/
+    position: relative;
+    /*形状*/
+    display: inline-block;
+    padding: 0 20px;
+    color: #000;
+    text-decoration: none;
+    outline: none;
+}
+
+/*矢印と下線の形状*/
+.btnarrow-left::before {
+    content: '';
+    /*絶対配置で下線の位置を決める*/
+    position: absolute;
+    bottom: -8px;
+    left: 0%;
+    /*下線の形状*/
+    width: 85%;
+    height: 1px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+.btnarrow-left::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+    bottom: -4px;
+    right: 100px;
+    /*矢印の形状*/
+    width: 15px;
+    height: 1px;
+    background: #000;
+    transform: rotate(145deg);
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+/*hoverした際の移動*/
+.btnarrow-left:hover::before {
+    left: -5%;
+}
+
+.btnarrow-left:hover::after {
+    right: 105px;
+}
+
+
+
+/*矢印が右に移動する*/
+.btnarrow-right {
+    /*矢印と下線の基点とするためrelativeを指定*/
+    position: relative;
+    /*形状*/
+    display: inline-block;
+    padding: 0 20px;
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+
+/*矢印と下線の形状*/
+.btnarrow-right::before {
+    content: '';
+    /*絶対配置で下線の位置を決める*/
+    position: absolute;
+    bottom: -8px;
+    left: 15%;
+    /*下線の形状*/
+    width: 85%;
+    height: 1px;
+    background: #333;
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+.btnarrow-right::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    /*矢印の形状*/
+    width: 15px;
+    height: 1px;
+    background: #333;
+    transform: rotate(35deg);
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+/*hoverした際の移動*/
+.btnarrow-right:hover::before {
+    left: 20%;
+}
+
+.btnarrow-right:hover::after {
+    right: -5%;
+}
+
+@media screen and (min-width: 768px) {
+    .works-single {
+        padding: 3vw 10vw;
+    }
+
+    .item-under dd {
+        width: 80%;
+        margin: 0;
+    }
+
+    .item-left-pattern {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .works-single .item-right {
+        width: 100%;
+    }
+
+    .works-single .works-title-block {
+        margin-top: 52px;
+    }
+
+    .works-single .content-wrapper {
+        display: block;
+    }
+
+    .page-nav {
+        margin-bottom: 30px;
+    }
+
+    .works-single .item-under {
+        margin-bottom: 50px;
+    }
+
+    .works-single .item-left {
+        width: 100%;
+        margin-bottom: 36px;
+    }
+
+    .view-more {
+        margin-top: 14px;
+    }
+
+    .view-more a {
+        font-size: 0.875rem;
+    }
+
+    .item-under dl {
+        flex-flow: column;
+        gap: 20px;
+        font-size: 1em;
+    }
+
+    .view-more.is-works a {
+        font-size: 12px;
+    }
+
+}
