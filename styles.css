@@ -1,7 +1,7 @@
 /* -----------------------------------
    Base
 ----------------------------------- */
-@font-face {
+/*@font-face {
   font-family: "DenkiChip";
   src: url("./fonts/x8y12pxDenkiChip.woff2") format("woff2"),
        url("./fonts/x8y12pxDenkiChip.ttf") format("truetype");
@@ -16,7 +16,7 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
-}
+}*/
 
 @font-face {
   font-family: "FuturaPT";
