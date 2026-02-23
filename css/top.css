@@ -1,0 +1,304 @@
+@charset "UTF-8";
+
+.top {
+    position: relative;
+    height: calc(var(--vh)* 100);
+}
+
+.top .wrapper {
+    height: 50%;
+}
+
+.eachTextAnime {
+    font-size: 12px;
+    color: #777;
+}
+
+h2 .eachTextAnime {
+    font-size: 12px;
+    color: #777;
+    letter-spacing: 0.2em;
+}
+
+.eachTextAnime span {
+    opacity: 0;
+}
+
+.eachTextAnime.appeartext span {
+    animation: text_anime_on 1s ease-out forwards;
+}
+
+@keyframes text_anime_on {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.plofile {
+    background-image: url(../images/hands.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+    animation-name: plofile;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes plofile {
+    from {
+        filter: blur(10px);
+        transform: scale(1.02);
+        opacity: 0;
+    }
+
+    to {
+        filter: blur(0);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.fadeInUp {
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+.about-padd {
+    position: relative;
+}
+
+
+
+.about-flex .about-button {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.about-flex,
+.name-ja,
+.works-button {
+    width: 100%;
+    margin-bottom: 6.1875vw;
+    font-size: 1.375vw;
+    letter-spacing: .04em;
+    margin-top: -2vw;
+}
+
+
+.name-en {
+    font-size: 0.9vw;
+    color: #777;
+    letter-spacing: 0.2em;
+    padding-left: 1vw;
+}
+
+.works {
+    background-color: #f9f9f9;
+}
+
+.works-child {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.works-child li {
+    font-size: 0.9vw;
+    letter-spacing: 0.3em;
+}
+
+.website_list,
+.graphic_list,
+.banner_list {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    position: relative;
+    padding-top: 1.2vw;
+}
+
+.banner_list {
+    flex-wrap: wrap;
+}
+
+.category {
+    font-size: 11px;
+    color: #777;
+    letter-spacing: 0.2em;
+}
+
+.website_list_item2 {
+    padding-bottom: 1vw;
+}
+
+/*== 線の上を別の線が伸びる */
+
+.btnlinestretches4 {
+    /*線の基点とするためrelativeを指定*/
+    position: relative;
+    /*リンクの形状*/
+    color: #000;
+    padding: 0px 0px 0.5vw 0px;
+    display: inline-block;
+    outline: none;
+
+}
+
+/*線の設定*/
+.btnlinestretches4::before,
+.btnlinestretches4::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    /*線の形状*/
+    background: #000;
+    width: 100%;
+    height: 1px;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease-in-out;
+}
+
+/*hover時に伸びる線の形状*/
+.btnlinestretches4::after {
+    width: 0;
+    background: #ccc;
+}
+
+/*hover時に100%に伸びる*/
+.btnlinestretches4:hover::after {
+    width: 100%;
+}
+
+.more,
+.plus {
+    font-size: 1vw;
+}
+
+.plus {
+    padding-left: 2vw;
+}
+
+@media (min-width: 768px) {
+    .websiteimages {
+        max-width: 23vw;
+    }
+
+    .about-padd {
+        margin-right: 4.5vw;
+        padding-left: 48.125vw;
+        padding-bottom: 8.9375vw;
+        margin-top: 4vw;
+    }
+
+    .about-flex {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -1.25vw;
+        margin-left: -23.75vw;
+    }
+
+    .about-p1,
+    .about-p2,
+    .about-p3 {
+        font-size: .78125vw;
+        line-height: 2.32;
+        letter-spacing: .03em;
+        width: 23.75vw;
+        padding-right: 3.4375vw;
+    }
+
+    .about-p1,
+    .about-p2 {
+        padding-bottom: 30px;
+    }
+
+    .about_image2 {
+        position: absolute;
+        top: -3vw;
+        left: 0;
+        width: 24.375vw;
+    }
+
+    .website-flex {
+        margin: 0 auto;
+    }
+
+    .works li {
+        max-width: 23vw;
+    }
+
+    .works-child {
+        gap: 45px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .website_list,
+    .graphic_list,
+    .banner_list {
+        gap: 6vw;
+    }
+
+    .works-child li {
+        font-size: 2.8vw;
+    }
+
+    .about_image1 {
+        margin-top: 10vw;
+    }
+
+    .about_image2 {
+        position: absolute;
+        right: 0vw;
+        width: 25vw;
+        top: 135vw;
+    }
+
+    .name-ja {
+        font-size: 3vw;
+        letter-spacing: .04em;
+        margin-top: 38vw;
+    }
+
+    .name-en {
+        font-size: 2.5vw;
+    }
+
+    .about-p1,
+    .about-p2,
+    .about-p3 {
+        margin-top: 5vw;
+        font-size: 3vw;
+        line-height: 2.1;
+        letter-spacing: .1em;
+    }
+
+    .btnlinestretches {
+        margin-top: 8vw;
+    }
+
+    .more,
+    .plus {
+        font-size: 3.8vw;
+    }
+
+    .about-image {
+        padding-top: 9vw;
+    }
+
+    .website_list_item2{
+        padding-bottom: 6vw;
+    }
+}
