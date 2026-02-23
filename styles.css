@@ -142,7 +142,10 @@ flex-wrap: wrap;
     flex-direction: row;
     gap: 24px;
    margin-bottom: 100px;
-    
+}
+
+.work-list:last-child {
+   margin-bottom: 0;
 }
 
 .work-card {
