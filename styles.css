@@ -70,7 +70,7 @@
    Hero
 ----------------------------------- */
 .hero .container {
-   height: 500px;
+   height: 600px;
     display: flex;
 flex-direction: column;
     align-items: center;
@@ -80,6 +80,7 @@ flex-direction: column;
 .hero .name {
     font-size: 70px;
     line-height: 1;
+   margin-bottom: 70px;
 }
 
 .hero .name span {
@@ -91,6 +92,7 @@ flex-direction: column;
     margin: 0;
   font-size: 14px;
   opacity: 0.7;
+   letter-spacing: 1px;
 }
 
 .hero .title {
