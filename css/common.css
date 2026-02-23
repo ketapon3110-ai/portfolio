@@ -12,7 +12,7 @@ body {
 
 @font-face {
   font-family: "Nanum Gothic";
-  src: url("./fonts/PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.0.woff2") format("truetype");
+  src: url("../fonts/PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.0.woff2") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
