@@ -18,6 +18,9 @@ hr {
     background-color: #eee;
 }
 
+h3.case-section__subtitle {
+    margin: 15px 0;
+}
 .works-single {
     padding: 3vw 5vw;
     max-width: 1300px;
@@ -344,9 +347,6 @@ hr {
     font-size: 21px;
     font-weight: bold;
     border-bottom: 1px solid;
-    }
-    h3.case-section__subtitle {
-        margin: 15px 0;
     }
 
 }
