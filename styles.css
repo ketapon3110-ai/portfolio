@@ -49,6 +49,10 @@ html, body {
   line-height: 1.8;
 }
 
+body .futura {
+   font-family: "FuturaPT", sans-serif;
+}
+
 body {
   -webkit-font-smoothing: none;
   image-rendering: pixelated;
