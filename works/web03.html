@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow">
+  <title>技術的SEO・パフォーマンス改善 | Keita Saito Portfolio</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/top.css">
+  <link rel="stylesheet" href="../css/works.css" />
+  <link rel="stylesheet" href="../css/plide-core.min.css" />
+  <script src="../js/splide.min.js"></script>
+</head>
+<body class="case-page">
+  <div id="loading-screen">
+    <div class="loading-screen__inner">
+      <p class="loading-screen__label futura">Loading</p>
+      <p class="loading-screen__title futura">Keita Saito Portfolio</p>
+      <p class="loading-screen__percent futura" id="loading-percent">0%</p>
+      <div class="loading-screen__bar">
+        <div class="loading-screen__barFill" id="loading-barFill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ヘッダー -->
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a href="../index.html" class="brand futura">Keita Saito</a>
+      <nav class="nav">
+        <a href="../index.html#works" class="futura">Works</a>
+        <a href="../index.html#skills" class="futura">Skills</a>
+        <a href="../index.html#contact" class="futura">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="works-single">
+      <div class="page-title-wrapper">
+        <h2 class="futura">WORKS<p class="eachTextAnime">制作物</p></h2>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="item-left">
+          <div class="eyecatch">
+            <div class="slider">
+              <section class="splide" aria-label="技術的SEO・パフォーマンス改善">
+                <div class="splide-wrapper">
+                  <div class="splide__track">
+                    <div class="splide__list">
+                      <div class="splide__slide">
+                        <img src="../img/web03.jpg" width="100%" height="auto" alt="技術的SEO・パフォーマンス改善：トップビュー">
+                      </div>
+                      <div class="splide__slide">
+                        <img src="../img/web03_slider01.png" width="100%" height="auto" alt="Core Web Vitals 改善レポート">
+                      </div>
+                      <div class="splide__slide">
+                        <img src="../img/web03_slider02.png" width="100%" height="auto" alt="PageSpeed Insights スコア改善">
+                      </div>
+                      <div class="splide__slide">
+                        <img src="../img/web03_slider03.jpg" width="100%" height="auto" alt="スマートフォン表示の改善">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 矢印 -->
+                  <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev button prev">
+                      <img src="../img/slider_arrow_icon.png" alt="" class="align-middle">
+                    </button>
+                    <button class="splide__arrow splide__arrow--next button next">
+                      <img src="../img/slider_arrow_icon.png" alt="" class="align-middle">
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <script>
+                const target = '.splide';
+                const options = {
+                  mediaQuery: 'min',
+                  type: "loop",
+                  perPage: 1,
+                  gap: 24,
+                  autoplay: false,
+                  interval: 6000,
+                  speed: 1000,
+                  pauseOnFocus: false,
+                };
+                const mySplide = new Splide(target, options);
+                mySplide.mount();
+              </script>
+            </div>
+          </div>
+
+          <div class="works-title-block">
+            <ul class="term-list">
+              <li>技術的SEO</li>
+              <li>パフォーマンス改善</li>
+              <li>フロント実装</li>
+              <li>計測設計</li>
+            </ul>
+            <h3>技術的SEO・パフォーマンス改善（Core Web Vitals）</h3>
+            <p class="category futura">Front-end / Performance / Direction</p>
+            <div class="view-more is-works">
+              URL：https://www.alo-organic.com/
+            </div>
+          </div>
+        </div>
+
+        <div class="item-right">
+          <dl>
+            <dd>自社ECサイトにおけるCore Web Vitals（CLS/LCP/INP）と表示速度を改善し、離脱率と検索流入の両方を底上げしたプロジェクト。</dd>
+          </dl>
+          <dl>
+            <hr>
+            <dt>使用ツール</dt>
+            <dd class="futura">Google Analytics 4 ・ PageSpeed Insights ・ Lighthouse ・ Google Search Console ・ Visual Studio Code ・ Excel</dd>
+          </dl>
+          <dl>
+            <hr>
+            <dt>言語</dt>
+            <dd class="futura">HTML / CSS / JavaScript / Liquid</dd>
+          </dl>
+          <dl>
+            <hr>
+            <dt>制作期間</dt>
+            <dd>調査〜改善設計〜実装〜検証まで継続的に対応（リニューアル期間を起点に段階的に実施）。</dd>
+          </dl>
+          <dl>
+            <hr>
+            <dt>対応範囲</dt>
+            <dd>現状調査 / 課題整理 / 改善方針策定 / フロント実装 / 計測設計 / 効果検証</dd>
+          </dl>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="item-under">
+        <dl>
+          <dt class="section-title">概要</dt>
+          <dd>
+            自社ECサイトにおいて、表示速度指標（Core Web Vitals）が基準未達となっており、モバイル環境での離脱率が高い状態だった。<br>
+            SEO担当からも改善の要望はあったが、具体的な技術改善までは手が回っていなかったため、課題特定から改善設計、実装、効果検証までをフロントエンド側で一貫して担当し、表示速度と体験品質の改善を主導した。
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="section-title">背景と課題</dt>
+          <dd>
+            PageSpeed Insights のスコアは 5〜9 点と低く、特にモバイル回線での表示に時間がかかっていた。<br>
+            主な技術的な課題は次のとおり。
+            <br><br>
+            ・LCP画像の読み込みが遅く、ファーストビューの表示が重い<br>
+            ・画像サイズ未指定によるレイアウトシフト（CLS）が多い<br>
+            ・描画ブロックとなるCSSやJavaScriptが多く、初回表示が遅い<br>
+            ・スマートフォンでの回線状況によって体感速度が大きく低下する構造になっていた<br>
+            コンテンツは改善されていても、「表示前に離脱するユーザー」が多い状態であり、CV以前の体験にボトルネックがあることが明らかだった。
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="section-title">ゴール</dt>
+          <dd>
+            Core Web Vitals の基準達成と、それに伴うユーザー体験と検索流入の改善を目指した。<br>
+            単にスコアを上げるのではなく、モバイルでの実際の読み込み体感を改善し、直帰率とオーガニック流入の両面で効果が出る状態をゴールとして設定した。
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="section-title">アプローチ</dt>
+          <dd>
+            <h3 class="case-section__subtitle">1. 課題の可視化と優先順位付け</h3>
+            PageSpeed Insights や Lighthouse で技術的なボトルネックを洗い出しつつ、GA4で回線別の直帰率・離脱率を確認し、数値に影響が大きいポイントから着手した。<br>
+            そのうえで、「スコアを上げるための改善」ではなく、「ユーザー体験に与える影響の大きさ」で優先順位を決めた。<br><br>
+
+            <h3 class="case-section__subtitle">2. 改善設計とフロント実装</h3>
+            既存テンプレートとの整合性を保ちながら、次のような改善を段階的に実装した。<br>
+            ・LCP画像の圧縮・WebP化・優先読み込み設定<br>
+            ・画像に width / height を指定し、CLSを抑制<br>
+            ・遅延読み込み設定の見直し（重要要素は先読み、下層要素は遅延）<br>
+            ・不要スクリプトの削減と読み込み位置の整理<br>
+            ・CSS読み込み順の調整と、ファーストビュー優先のスタイル適用<br>
+            テンプレート制約がある中でも、細かい単位でボトルネックを潰していく方針で進めた。<br><br>
+
+            <h3 class="case-section__subtitle">3. 効果検証とチューニング</h3>
+            改善後は、PageSpeed Insights / Lighthouse でのスコアと、GA4での行動指標を定期的に確認。<br>
+            表示速度が改善したページから順に、直帰率や商品詳細への遷移率が改善していることを確認し、他ページにも同様の改善パターンを展開していった。
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="section-title">実装で意識したこと</dt>
+          <dd>
+            表示速度だけを優先してデザインを崩さないよう、ビジュアル担当と相談しながら、画像の扱いや余白の取り方は維持しつつ、読み込み順や形式を見直す形で調整した。<br>
+            また、将来的な改修時にも影響範囲が分かりやすいよう、テンプレート内での役割やコメント整理も行い、他メンバーが保守しやすい実装を意識した。
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="section-title futura">My Role</dt>
+          <dd>
+            SEO担当が全体方針を持つ中で、技術的な課題の洗い出しから改善方針の設計、フロント実装、効果検証までを一貫して担当した。<br>
+            「SEO施策」としてではなく、「ユーザー体験と売上に直結する基盤改善」として位置づけ、施策優先度の整理や影響範囲の説明も行いながら、段階的なリリースをリードした。
+          </dd>
+        </dl>
+
+        <dl>
+          <dt class="section-title">数値改善</dt>
+          <dd>
+            <h3 class="case-section__subtitle">Core Web Vitals・速度指標</h3>
+            PageSpeed Insights スコア：5〜9 → 29〜35<br>
+            CLS / LCP / INP はすべて赤判定から改善。<br><br>
+
+            <h3 class="case-section__subtitle">行動・流入指標</h3>
+            モバイル直帰率：−35pt<br>
+            オーガニック流入：前年比 212％<br>
+            主要キーワード検索順位：1位を獲得<br>
+            改善はCVだけでなく、サイト全体の体験価値向上にもつながった。
+          </dd>
+        </dl>
+      </div>
+
+      <div class="works__subImg works__subImg--website">
+        <img class="works__pcImg active" src="../img/works03_pc.png" alt="技術的SEO・パフォーマンス改善 PC表示">
+        <img class="works__spImg" src="../img/works03_sp.png" alt="技術的SEO・パフォーマンス改善 SP表示">
+      </div>
+
+      <ul class="page-nav">
+        <li><a class="btnarrow-left" href="">前の作品</a></li>
+        <li><a class="btnarrow-right" href="">次の作品</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="../js/loading.js"></script>
+</body>
+</html>
